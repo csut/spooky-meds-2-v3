@@ -1,0 +1,7 @@
+spooky-meds-2-v3
+  minimum viable product
+    - login link
+    - "Spooky last got his meds X hours ago."
+    - "(from user)"
+    - [update button] (only appears when loged in)
+    - user accounts

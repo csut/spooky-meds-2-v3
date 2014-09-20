@@ -1,0 +1,13 @@
+/*****************************************************************************/
+/* Index: Style */
+/*****************************************************************************/
+.index__login-buttons {
+  text-align: center;
+}
+.login-dropdown-list {
+  left: 0;
+}
+.index__attribution {
+  font-weight: 100;
+  /*font-style: italic;*/
+}

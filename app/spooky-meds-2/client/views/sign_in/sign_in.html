@@ -1,0 +1,16 @@
+<template name="SignIn">
+  <form id="sign-in__form" class="pure-form pure-u-1 pure-u-md-1-3">
+    <fieldset class="pure-group">
+      <input id="sign-in__username" class="pure-input-1" type="text" placeholder="Username">
+      <input id="sign-in__password" class="pure-input-1" type="password" placeholder="Password">
+      <button id="sign-in__submit" class="pure-input-1 pure-button pure-button-primary" type="submit">
+        Sign In
+      </button>
+    </fieldset>
+  </form>
+  {{#if signInError}}
+    <div class="sign-in__error">
+      {{signInError}}
+    </div>
+  {{/if}}
+</template>

@@ -1,0 +1,47 @@
+<template name="Index">
+  <div class="pure-u-1">
+
+    <!-- include a spooky logo (of sorts) -->
+    {{> Art}}
+    <!--  -->
+
+    <!--  -->
+    {{#if latestUpdate}}
+      {{#with latestUpdate}}
+        <h1>
+          {{#if updatedWithinLastHour date}}
+            {{#if updatedWithinLastTwoMinutes date}}
+              Last dose given <br>
+              just now
+            {{else}}
+              Last dose given <br>
+              {{minutesAgo date}} minutes ago
+            {{/if}}
+          {{else}}
+            Last dose given <br>
+            {{hoursAgo date}} hours ago.
+          {{/if}}
+        </h1>
+        <h2 class="index__attribution">
+          from the hand of<br>
+          {{updater}}
+        </h2>
+      {{/with}}
+    {{else}} <!-- if spooks meds have never been updated -->
+      <h1>
+        Searching for latest<br>
+        Updates...
+      </h1>
+    {{/if}}
+    {{#if currentUser}} <!-- if signed in, show an update button, else show sign-in form -->
+      <div>
+        {{> UpdateButton}}
+      </div>
+      {{> IndexSignOut}}
+    {{else}}
+      <div class="index__login-buttons">
+        {{> SignIn}}
+      </div>
+    {{/if}}
+  </div>
+</template>
